@@ -1,0 +1,22 @@
+body {
+	font-family: Sans-Serif;
+}
+
+/* Define sign-in buttons */
+.btn_google_signin_light {
+	width: 191px;
+	user-select: none;
+	content: url(/img/btn_google_signin_light_normal_web@2x.png)
+}
+
+/* .btn_google_signin_light:hover {
+	content: url(/img/btn_google_signin_light_focus_web@2x.png)
+} */
+
+.btn_google_signin_light:active {
+	content: url(/img/btn_google_signin_light_pressed_web@2x.png)
+}
+
+.btn_google_signin_light:disabled {
+	content: url(/img/btn_google_signin_light_disabled_web@2x.png)
+}

@@ -1,0 +1,9 @@
+glide.lock
+vendor/
+server
+server.exe
+server-linux-amd64
+debug.test
+upload/*
+!upload/.gitkeep
+.vscode/settings.json

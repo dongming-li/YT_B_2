@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.iastate.linux.git.cyswapper">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature android:name="android.hardware.camera2" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".GoogleSignOn"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UserItemsPage"
+            android:label="List of Items"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".HomePage"
+            android:label="CySwapper"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AccountSettings"
+            android:label="Account Settings" />
+        <activity
+            android:name=".ProfilePage"
+            android:label="Profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".listview" />
+        <activity
+            android:name=".DormsPage"
+            android:label="@string/title_activity_dorms_page"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MessagesPage"
+            android:label="@string/title_activity_messages_page"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BorrowedItemsPage"
+            android:label="@string/title_activity_borrowed_items_page"
+            android:theme="@style/AppTheme.NoActionBar" />
+        android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".HousesPage"
+            android:label="Houses"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ListingHouseItemsPage"
+            android:label="List of House Items"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddItemPage"
+            android:label="Add Item"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ItemInfoPage"
+            android:label="Item Info"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ItemInfoBorrowingItem" />
+        <activity android:name=".ItemInfoReturningItem"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/activity_profile">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/header_cover_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/moon_sky"
+                        android:adjustViewBounds="true"
+                        />
+
+                    <ImageView
+                        android:id="@+id/user_profile_photo"
+                        android:roundIcon="@mipmap/sleeping_kyle"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_below="@+id/header_cover_image"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="-60dp"
+                        android:elevation="5dp"
+                        android:scaleType="fitXY"
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/profile_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/header_cover_image"
+                        android:background="#000000"
+                        android:elevation="4dp">
+
+                        <TextView
+                            android:id="@+id/user_profile_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10mm"
+                            android:textColor="#fff"
+                            android:textSize="24sp"
+                            android:textStyle="normal" />
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/user_profile_dorm"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_centerHorizontal="true"-->
+                            <!--android:layout_marginTop="1mm"-->
+                            <!--android:layout_below="@id/user_profile_name"-->
+                            <!--android:text="Dorm: Helser Hall"-->
+                            <!--android:textColor="#fff"-->
+                            <!--android:textSize="24sp"-->
+                            <!--android:textStyle="normal"-->
+                            <!--tools:ignore="HardcodedText" />-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/user_profile_email"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_centerHorizontal="true"-->
+                            <!--android:layout_marginTop="1mm"-->
+                            <!--android:layout_below="@+id/user_profile_name"-->
+                            <!--android:textColor="#fff"-->
+                            <!--android:textSize="24sp"-->
+                            <!--android:textStyle="normal"/>-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/user_profile_phone"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_centerHorizontal="true"-->
+                            <!--android:layout_marginTop="1mm"-->
+                            <!--android:layout_below="@+id/user_profile_email"-->
+                            <!--android:text="Phone: (309) 324-5749"-->
+                            <!--android:textColor="#fff"-->
+                            <!--android:textSize="24sp"-->
+                            <!--android:textStyle="normal"-->
+                            <!--tools:ignore="HardcodedText" />-->
+
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/profile_layout"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/your_items"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="#fff"
+                            android:clickable="true"
+                            android:elevation="4dp"
+                            android:padding="20dp"
+                            android:text="Your Items"
+                            tools:ignore="HardcodedText"
+                            />
+                        <!--<Button-->
+                            <!--android:id="@+id/borrowed_items"-->
+                            <!--android:layout_width="fill_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_margin="5dp"-->
+                            <!--android:layout_marginBottom="3dp"-->
+                            <!--android:layout_marginTop="3dp"-->
+                            <!--android:background="#fff"-->
+                            <!--android:clickable="true"-->
+                            <!--android:elevation="4dp"-->
+                            <!--android:padding="20dp"-->
+                            <!--android:text="Borrowed Items"-->
+                            <!--tools:ignore="HardcodedText"-->
+                            <!--/>-->
+
+                        <!--<Button-->
+                            <!--android:id="@+id/messages"-->
+                            <!--android:layout_width="fill_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_margin="5dp"-->
+                            <!--android:background="#fff"-->
+                            <!--android:clickable="true"-->
+                            <!--android:elevation="4dp"-->
+                            <!--android:padding="20dp"-->
+                            <!--android:text="Messages"-->
+                            <!--tools:ignore="HardcodedText"-->
+                            <!--/>-->
+
+                        <Button
+                            android:id="@+id/account_settings"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="3dp"
+                            android:background="#fff"
+                            android:clickable="true"
+                            android:elevation="4dp"
+                            android:padding="20dp"
+                            android:text="Account Settings"
+                            tools:ignore="HardcodedText"
+                            />
+                        <!--<Button-->
+                            <!--android:id="@+id/home"-->
+                            <!--android:layout_width="fill_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_margin="5dp"-->
+                            <!--android:background="#fff"-->
+                            <!--android:clickable="true"-->
+                            <!--android:elevation="4dp"-->
+                            <!--android:padding="20dp"-->
+                            <!--android:text="Home"-->
+                            <!--tools:ignore="HardcodedText"-->
+                            <!--/>-->
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <include
+        layout="@layout/app_bar_test_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_test_menu"
+        app:menu="@menu/activity_test_menu_drawer"
+        >//</android.support.design.widget.NavigationView>
+
+
+</android.support.v4.widget.DrawerLayout>

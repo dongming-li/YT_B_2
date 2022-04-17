@@ -1,0 +1,61 @@
+{{define "title"}}Vendors{{end}}
+
+{{define "head"}}
+<script	src="/js/db.js"></script>
+{{end}}
+
+{{define "dialogs"}}
+{{end}}
+
+{{define "content"}}
+
+<!-- Simple list -->
+<style>
+	.upload-list-item {
+	  width: 300px;
+	}
+</style>
+<div class="mdl-grid">
+    <div class="mdl-layout-spacer"></div>
+    <div class="mdl-cell mdl-cell--4-col">
+
+
+		<ul class="upload-list-item mdl-list">
+			<li class="mdl-list__item">
+			  <span class="mdl-list__item-primary-content">
+				Available Vendors
+			  </span>
+			</li>
+			<li class="mdl-list__item">
+			  <span class="mdl-list__item-primary-content">
+						<div id="vendorList"></div>
+			  </span>
+		  </ul>
+	</div>
+    <div class="mdl-layout-spacer"></div>
+</div>
+
+
+<script>
+		function makeUL(array) {
+		// Create the list element:
+		var list = document.createElement('ul');
+
+		for(var i = 0; i < array.length; i++) {
+			// Create the list item:
+			var item = document.createElement('li');
+
+			// Set its contents:
+			item.appendChild(document.createTextNode(array[i]));
+
+			// Add it to the list:
+			list.appendChild(item);
+		}
+
+		return list;
+		}
+
+		// Add the contents of options[0] to #foo:
+		document.getElementById('vendorList').appendChild(makeUL({{.vendorNameList}}));
+	</script>
+{{end}}

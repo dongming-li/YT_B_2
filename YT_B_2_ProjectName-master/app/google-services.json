@@ -1,0 +1,87 @@
+{
+  "project_info": {
+    "project_number": "985488744996",
+    "project_id": "cyswapper"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:985488744996:android:daedb11d6758b054",
+        "android_client_info": {
+          "package_name": "edu.iastate.git.cyswapper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "985488744996-1non9kquakbajdmola2hl4hdgnefcc3b.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "985488744996-rt6k07o5ak965hm511app9d7ka3gmto9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.iastate.git.cyswapper",
+            "certificate_hash": "bfa21b0de764d6eefba8ef2371f54879cbd873e1"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzp197plYCS4PdzrJZM5GMFtSEUS1Di2Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:985488744996:android:6fe914a71be82cc9",
+        "android_client_info": {
+          "package_name": "edu.iastate.linux.git.cyswapper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "985488744996-g1i3r2o2n519k6fm490148i93a5eej45.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.iastate.linux.git.cyswapper",
+            "certificate_hash": "59124b6c3cc5d3b2c80155e7b5aa5929f98ae039"
+          }
+        },
+        {
+          "client_id": "985488744996-1non9kquakbajdmola2hl4hdgnefcc3b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzp197plYCS4PdzrJZM5GMFtSEUS1Di2Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

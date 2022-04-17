@@ -1,0 +1,49 @@
+{{define "title"}}Items{{end}}
+
+{{define "head"}}
+{{end}}
+
+{{define "dialogs"}}
+{{end}}
+
+{{define "content"}}
+
+<!-- Simple list -->
+<style>
+	.upload-list-item {
+	  width: 300px;
+	}
+</style>
+<div class="mdl-grid">
+    <div class="mdl-layout-spacer"></div>
+    <div class="mdl-cell mdl-cell--4-col">
+
+
+		<ul class="upload-list-item mdl-list">
+			<li class="mdl-list__item">
+			  <span class="mdl-list__item-primary-content">
+				Upload image.
+			  </span>
+			</li>
+			<li class="mdl-list__item">
+			  <span class="mdl-list__item-primary-content">
+				  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<form action="/upload" method="post" enctype="multipart/form-data">
+								<input class="mdl-textfield__input" type="file" id="dFileName" accept="image/jpeg">
+								<label class="mdl-textfield__label" for="dFileName"></label>
+				  </div>
+			  </span>
+			</li>
+			<li class="mdl-list__item">
+			  <span class="mdl-list__item-primary-content">
+					<input type="submit" value="Upload" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+							</form>
+			  </span>
+			</li>
+		  </ul>
+
+
+	</div>
+    <div class="mdl-layout-spacer"></div>
+</div>
+{{end}}

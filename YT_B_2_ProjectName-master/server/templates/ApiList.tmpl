@@ -1,0 +1,161 @@
+{{define "title"}}List JSON objects client will connect to.{{end}}
+
+{{define "head"}}
+	<script	src="/js/db.js"></script>
+{{end}}
+
+{{define "dialogs"}}
+	<!-- Begin dialogs-->
+	<dialog id="dialog-invalid-data" class="mdl-dialog">
+		<h4 class="mdl-dialog__title">Invalid Data</h4>
+		<div class="mdl-dialog__content">
+			<p>
+				You cannot submit empty data.
+			</p>
+		</div>
+		<div class="mdl-dialog__actions">
+			<button type="button" class="mdl-button close">Close</button>
+		</div>
+	</dialog>
+	<!-- End dialogs-->
+{{end}}
+
+{{define "content"}}
+<div class="mdl-grid">
+	<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-desktop">
+		<div class="mdl-layout-spacer"></div>
+			<form>
+				<h3>Test Page, Please Ignore</h3><br>
+
+				<fieldset>
+					<legend>Viewable Lists</legend>
+						<ul>
+							<li><a href="/items">Items</a></li>
+							<li><a href="/houses">Houses</a></li>
+							<li><a href="/dorms">Dorms</a></li>
+							<li><a href="/vendors">Vendors</a></li>
+						</ul>
+					</legend>
+				</fieldset>
+
+				<fieldset>
+					<legend>JSON Objects/Arrays:</legend>
+					<ul>
+						<li><a href="/api/adminitems">Upload Photo</a></li>
+						<li><a href="/api/admin">CA Remove Item Page</a></li>
+						<li><a href="/api/items">Items</a></li>
+						<li><a href="/api/houses">Houses</a></li>
+						<li><a href="/api/person">Persons</a></li>
+						<li><a href="/api/ca">Community Advisor</a></li>
+						<li><a href="/api/residents">Residents</a></li>
+						<li><a href="/api/dorms">Dorms</a></li>
+						<li><a href="/api/student">Students</a></li>
+						<li><a href="/api/vendor">Vendor</a></li>
+						<li><a href="/api/chatusers">Chats</a></li>
+					</ul>
+					</legend>
+				</fieldset>
+			</form>
+
+			<!-- <ul>
+				<li>Item Name:		<input type="text" name="ItemName"></li>
+				<li>Owner ID:		<input type="text" name="OwnerID"></li>
+				<li>Items House ID: <input type="text" name="ItemsHouseID"></li>
+				<li>Item ID:		<input type="text" name="ItemID"></li>
+				<li>Borrower ID: 	<input type="text" name="BorrowerID"></li>
+				<li>Date Borrowed: 	<input type="date" name="DateBorrowed"></li>
+				<li>Date Due: 		<input type="date" name="DateDue"></li>
+				<li>Available: 		<input type="text" name="Available"></li>
+			</ul>
+			<p><input type="submit"></input></p> -->
+
+			<h5>To remove an item, enter only the ID and click remove.</h5>
+			<!-- Begin Add Edit Form -->
+			<form action="#">
+				<style>
+				.demo-list-item {
+					width: 300px;
+				}
+				</style>
+
+				<ul class="demo-list-item mdl-list">
+					<li class="mdl-list__item">
+					<span class="mdl-list__item-primary-content">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+								<input class="mdl-textfield__input" type="text" id="dItemName">
+								<label class="mdl-textfield__label" for="dItemName">Item Name</label>
+						</div>
+					</span>
+					</li>
+					<li class="mdl-list__item">
+					<span class="mdl-list__item-primary-content">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+								<input class="mdl-textfield__input" type="text" id="dOwnerID">
+								<label class="mdl-textfield__label" for="dOwnerID">Owner ID</label>
+						</div>
+					</span>
+					</li>
+					<li class="mdl-list__item">
+					<span class="mdl-list__item-primary-content">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+								<input class="mdl-textfield__input" type="text" id="dItemsHouseID">
+								<label class="mdl-textfield__label" for="dItemsHouseID">Items House ID</label>
+						</div>
+					</span>
+					</li>
+					<li class="mdl-list__item">
+					<span class="mdl-list__item-primary-content">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<input class="mdl-textfield__input" type="text" id="dItemID">
+							<label class="mdl-textfield__label" for="dItemID">Item ID</label>
+						</div>
+					</span>
+					</li>
+					<li class="mdl-list__item">
+					<span class="mdl-list__item-primary-content">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<input class="mdl-textfield__input" type="text" id="dBorrowerID">
+							<label class="mdl-textfield__label" for="dBorrowerID">Borrower ID</label>
+						</div>
+					</span>
+					</li>
+					<li class="mdl-list__item">
+					<span class="mdl-list__item-primary-content">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+								<input class="mdl-textfield__input" type="text" id="dDateBorrowed">
+								<label class="mdl-textfield__label" for="dDateBorrowed">Date Borrowed (YYYY-MM-DD)</label>
+						</div>
+					</span>
+					</li>
+					<li class="mdl-list__item">
+					<span class="mdl-list__item-primary-content">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<input class="mdl-textfield__input" type="text" id="dDateDue">
+							<label class="mdl-textfield__label" for="dDateDue">Date Due (YYYY-MM-DD)</label>
+						</div>
+					</span>
+					</li>
+					<li class="mdl-list__item">
+					<span class="mdl-list__item-primary-content">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<input class="mdl-textfield__input" type="text" id="dAvailable">
+							<label class="mdl-textfield__label" for="dAvailable">Available</label>
+						</div>
+					</span>
+					</li>
+				</ul>
+				<button onclick="addItem()" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+					Add
+				</button>
+				<button onclick="removeItem()" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+					Remove
+				</button>
+				<button onclick="updateItem()" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+					Change
+				</button>
+			</form>
+			<!-- End Add Edit Form -->
+			<div class="mdl-layout-spacer"></div>
+	</div> <!-- mdl-cell -->
+</div> <!-- mdl-grid -->
+{{end}}

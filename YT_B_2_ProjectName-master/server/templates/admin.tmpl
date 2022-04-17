@@ -1,0 +1,60 @@
+{{define "title"}}Administrative Functions{{end}}
+
+{{define "head"}}
+	<script	src="/js/db.js"></script>
+{{end}}
+
+{{define "dialogs"}}
+{{end}}
+
+{{define "content"}}
+
+<div class="mdl-grid">
+		<div class="mdl-layout-spacer"></div>
+		<div class="mdl-cell mdl-cell--4-col">
+		<b>		Item Name,	Item ID</b>
+		<div id="itemListCAs"></div>
+
+		</div>
+		<div class="mdl-layout-spacer"></div>
+</div>
+<div class="mdl-grid">
+	<div class="mdl-layout-spacer"></div>
+	<div class="mdl-cell mdl-cell--4-col">
+		<span class="mdl-list__item-primary-content">
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" type="text" id="dItemID">
+					<label class="mdl-textfield__label" for="dItemID">Item ID</label>
+				</div>
+		</span>
+
+		<button onclick="removeItem()" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+				Remove
+		</button>
+	</div>
+	<div class="mdl-layout-spacer"></div>
+</div>
+
+<script>
+	function makeUL(array) {
+	// Create the list element:
+	var list = document.createElement('ul');
+
+	for(var i = 0; i < array.length; i++) {
+		// Create the list item:
+		var item = document.createElement('li');
+
+		// Set its contents:
+		item.appendChild(document.createTextNode(array[i]));
+
+		// Add it to the list:
+		list.appendChild(item);
+	}
+
+	return list;
+	}
+
+	// Add the contents of options[0] to #foo:
+	document.getElementById('itemListCAs').appendChild(makeUL({{.itemNameList}}));
+</script>
+{{end}}
